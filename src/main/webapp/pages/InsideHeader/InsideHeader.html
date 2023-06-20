@@ -1,0 +1,18 @@
+<wm-partial type="header" name="partial1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow class="color-header" name="gridrow2">
+                        <wm-gridcolumn columnwidth="8" horizontalalign="left" class="logo-header" name="gridcolumn3">
+                            <wm-picture resizemode="cover" picturesource="resources/images/logos/EventConnect_Logo.png" class="app-logo" on-click="Actions.goToPage_Main.invoke()" cursor="pointer" name="picture1"></wm-picture>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" horizontalalign="center" name="gridcolumn5">
+                            <wm-label caption="bind:&quot;Signed in as &quot; + Variables.loggedInUser.dataSet.name" class="loginName text-ellipsis" margin="20px unset unset unset" name="label1"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

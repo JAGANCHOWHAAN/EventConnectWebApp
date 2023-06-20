@@ -1,0 +1,19 @@
+.link-nav{
+    display: inline-flex;
+}
+.app-logo{
+    border-radius: 50px;
+    height: 70px;
+    padding: 10px !important;
+}
+.btnd-grp{
+    display: inline;
+    margin: auto;
+}
+.loginName{
+    background: black;
+    padding: 12px;
+    border-radius: 50px;
+    color: white;
+    margin-top: 13px !important;
+}

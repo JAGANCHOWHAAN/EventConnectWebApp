@@ -1,0 +1,93 @@
+.detailevent-logo{
+    max-width: -webkit-fill-available;
+    object-fit: fill !important;
+}
+.outerdiv{
+    padding: 0 0.75em 0 0.75em;
+    border-radius: 5px;
+}
+.innerdiv{
+    padding: 0.5em;
+    box-shadow: 0 1px 5px #aaa;
+    border-radius: 5px;
+}
+.titlehead{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+}
+.date{
+    font-size: 15px;
+    margin-left: 2px;
+}
+.ticketbtn{
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    background-color: #3387ac;
+}
+.ticketbtn:hover{
+    background-color: #339ecd;
+    color:white;
+}
+.wm-app .btn-default .ticketbtn:active{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #3387ac !important;
+}
+.detouter{
+    margin-top: 2em;
+}
+.eventcard{
+    border-radius: 5px;
+}
+.completePage{
+    padding: 7px!important;
+}
+.datetime{
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+.eventpic{
+    width: -webkit-fill-available !important;
+}
+.card-around{
+    background: white;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+.locationmap{
+    background: white;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-top: 1em;  
+}
+.hosted{
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+.speakersection{
+    margin-top: 1em;
+    background: white;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+.location{
+    display: flex;
+}
+.location-icon{
+    padding-right: 7px;
+    padding-left: 0.5em;
+}
+.eventTitle{
+    display: flex;
+}
+.wm-app .card .app-card-image img {
+    border-radius: 0px !important;
+}

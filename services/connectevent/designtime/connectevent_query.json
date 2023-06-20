@@ -1,0 +1,480 @@
+{
+  "EventSpeakerDetails" : {
+    "name" : "EventSpeakerDetails",
+    "description" : "This query gives the speaker details associated with a particular event",
+    "version" : "V2",
+    "queryString" : "SELECT Speaker.*\r\nFROM Speaker\r\nINNER JOIN EventSpeaker\r\nON Speaker.Id = EventSpeaker.Speaker_Id\r\nWHERE EventSpeaker.Event_Id = :EventID",
+    "countQueryString" : "select count(*) from (SELECT Speaker.*\r\nFROM Speaker\r\nINNER JOIN EventSpeaker\r\nON Speaker.Id = EventSpeaker.Speaker_Id\r\nWHERE EventSpeaker.Event_Id = :EventID) wmTempTable",
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "EventID",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "3",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.eventconnect.connectevent.models.query.EventSpeakerDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "Id",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      }, {
+        "name" : "Name",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "Bio",
+        "fieldName" : "bio",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PhotoUrl",
+        "fieldName" : "photoUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "LinkedInUrl",
+        "fieldName" : "linkedInUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "TwitterUrl",
+        "fieldName" : "twitterUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PortfolioUrl",
+        "fieldName" : "portfolioUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "EventSpeakerDetails1" : {
+    "name" : "EventSpeakerDetails1",
+    "description" : "This query gives the speaker details associated with an event",
+    "version" : "V2",
+    "queryString" : "SELECT Speaker.*\r\nFROM Speaker\r\nINNER JOIN EventSpeaker\r\nON Speaker.Id = EventSpeaker.Speaker_Id\r\nWHERE EventSpeaker.Event_Id = :EventID AND EventSpeaker.Speaker_Id = :SpeakerID",
+    "countQueryString" : "select count(*) from (SELECT Speaker.*\r\nFROM Speaker\r\nINNER JOIN EventSpeaker\r\nON Speaker.Id = EventSpeaker.Speaker_Id\r\nWHERE EventSpeaker.Event_Id = :EventID AND EventSpeaker.Speaker_Id = :SpeakerID) wmTempTable",
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "EventID",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "3",
+      "required" : true
+    }, {
+      "name" : "SpeakerID",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "3",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.eventconnect.connectevent.models.query.EventSpeakerDetails1Response",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "Id",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      }, {
+        "name" : "Name",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "Bio",
+        "fieldName" : "bio",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PhotoUrl",
+        "fieldName" : "photoUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "LinkedInUrl",
+        "fieldName" : "linkedInUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "TwitterUrl",
+        "fieldName" : "twitterUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PortfolioUrl",
+        "fieldName" : "portfolioUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "EventSpeakerDetailsEventID" : {
+    "name" : "EventSpeakerDetailsEventID",
+    "description" : "to retrieve the speaker details associated with an event",
+    "version" : "V2",
+    "queryString" : "SELECT Speaker.*\r\nFROM Speaker\r\nINNER JOIN EventSpeaker\r\nON Speaker.Id = EventSpeaker.Speaker_Id\r\nWHERE EventSpeaker.Event_Id = :EventID",
+    "countQueryString" : "select count(*) from (SELECT Speaker.*\r\nFROM Speaker\r\nINNER JOIN EventSpeaker\r\nON Speaker.Id = EventSpeaker.Speaker_Id\r\nWHERE EventSpeaker.Event_Id = :EventID) wmTempTable",
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "EventID",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "3",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.eventconnect.connectevent.models.query.EventSpeakerDetailsEventIdResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "Id",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      }, {
+        "name" : "Name",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "Bio",
+        "fieldName" : "bio",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PhotoUrl",
+        "fieldName" : "photoUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "LinkedInUrl",
+        "fieldName" : "linkedInUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "TwitterUrl",
+        "fieldName" : "twitterUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PortfolioUrl",
+        "fieldName" : "portfolioUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "getEventDetailsByLoginId" : {
+    "name" : "getEventDetailsByLoginId",
+    "description" : "gives event details",
+    "version" : "V2",
+    "queryString" : "select * from EventDetail where User_Id=:id",
+    "countQueryString" : "select count(*) from (select * from EventDetail where User_Id=:id) wmTempTable",
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "id",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.eventconnect.connectevent.models.query.GetEventDetailsByLoginIdResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "Id",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      }, {
+        "name" : "Title",
+        "fieldName" : "title",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "OrganizerName",
+        "fieldName" : "organizerName",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "OrganizerEmail",
+        "fieldName" : "organizerEmail",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "OrganizerPhNo",
+        "fieldName" : "organizerPhNo",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "About",
+        "fieldName" : "about",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "Location",
+        "fieldName" : "location",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "Fee",
+        "fieldName" : "fee",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "StartDate",
+        "fieldName" : "startDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "EndDate",
+        "fieldName" : "endDate",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "StartTime",
+        "fieldName" : "startTime",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Time",
+          "list" : false
+        }
+      }, {
+        "name" : "EndTime",
+        "fieldName" : "endTime",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Time",
+          "list" : false
+        }
+      }, {
+        "name" : "Poster",
+        "fieldName" : "poster",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "IsOnline",
+        "fieldName" : "isOnline",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Boolean",
+          "list" : false
+        }
+      }, {
+        "name" : "MeetingLink",
+        "fieldName" : "meetingLink",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "Status",
+        "fieldName" : "status",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "User_Id",
+        "fieldName" : "userId",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

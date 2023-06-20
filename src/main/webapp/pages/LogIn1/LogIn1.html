@@ -1,0 +1,83 @@
+<wm-page name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" class="bodycontent">
+            <wm-layoutgrid name="layoutgrid6" class="outer">
+                <wm-gridrow name="gridrow13">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                        <wm-picture resizemode="cover" name="picture1" picturesource="resources/images/imagelists/audience-conference.png" class="loginimg"></wm-picture>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                        <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout1">
+                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem1" horizontalalign="center">
+                                <wm-label padding="unset 0.5em" name="label16" caption="Event Connect" class="lblname"></wm-label>
+                            </wm-linearlayoutitem>
+                            <wm-linearlayoutitem name="linearlayoutitem3" flexgrow="1" horizontalalign="center">
+                                <wm-tabs type="static" statehandler="URL" name="tabs1">
+                                    <wm-tabpane name="tabpane1" title="Log in" class="login">
+                                        <wm-login name="login3">
+                                            <wm-form name="form3">
+                                                <wm-composite name="composite5">
+                                                    <wm-label class="col-md-12 control-label" caption="Email ID" name="label11" textalign="left"></wm-label>
+                                                    <wm-container class="col-md-12" name="container5">
+                                                        <wm-text placeholder="Enter Email ID" class="app-login-username" updateon="default" required="true" name="text5" type="email" autocomplete="false"></wm-text>
+                                                    </wm-container>
+                                                </wm-composite>
+                                                <wm-composite name="composite6">
+                                                    <wm-label class="col-md-12 control-label" caption="Password" name="label12" textalign="left"></wm-label>
+                                                    <wm-container class="col-md-12" name="container6">
+                                                        <wm-text type="password" placeholder="Enter password" class="app-login-password" updateon="default" required="true" name="text6" autocomplete="false"></wm-text>
+                                                    </wm-container>
+                                                </wm-composite>
+                                                <wm-button type="submit" caption="Sign in" width="100%" class="app-login-button btn-primary signinbtn" name="button3"></wm-button>
+                                            </wm-form>
+                                        </wm-login>
+                                    </wm-tabpane>
+                                    <wm-tabpane name="tabpane2" title="Sign up" class="signupcontainer">
+                                        <wm-liveform errormessage="" title="User" iconclass="fa fa-user" defaultmode="Edit" dataset="bind:Variables.ConnecteventUserDetailData.dataSet" captionalign="left" captionposition="top" name="UserDetailLiveForm1" insertmessage="Thank you for signing up! Your registration was successful">
+                                            <wm-layoutgrid columns="2" name="layoutgrid3">
+                                                <wm-gridrow name="gridrow6">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn10" horizontalalign="left">
+                                                        <wm-form-field name="firstName" displayname="First Name" show="true" primary-key="false" generator="assigned" key="firstName" type="string" readonly="false" required="true" widget="text" maxchars="30"
+                                                            inputtype="text" placeholder="Enter First Name" autocomplete="false"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn11" horizontalalign="left">
+                                                        <wm-form-field name="lastName" displayname="Last Name" show="true" primary-key="false" generator="assigned" key="lastName" type="string" readonly="false" required="true" widget="text" maxchars="30" inputtype="text"
+                                                            placeholder="Enter Last Name" autocomplete="false"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow7">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn13" horizontalalign="left">
+                                                        <wm-form-field name="phoneNumber" displayname="Phone Number" show="true" primary-key="false" generator="assigned" key="phoneNumber" type="string" readonly="false" required="true" widget="text" maxchars="255"
+                                                            inputtype="number" placeholder="Enter Phone Number" autocomplete="false"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn12" horizontalalign="left">
+                                                        <wm-form-field name="emailId" displayname="Email Id" show="true" primary-key="false" generator="assigned" key="emailId" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="email"
+                                                            placeholder="Enter Email ID" autocomplete="false"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow8">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn14" horizontalalign="left">
+                                                        <wm-form-field name="password" displayname="Password" show="true" primary-key="false" generator="assigned" key="password" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="password"
+                                                            placeholder="Enter Password" autocomplete="false"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn15" horizontalalign="left">
+                                                        <wm-form-field name="confirmPassword" displayname="Confirm Password" show="true" primary-key="false" generator="assigned" key="confirmPassword" type="string" readonly="false" required="true" widget="text"
+                                                            maxchars="255" inputtype="text" placeholder="Confirm Password" autocomplete="false"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                            <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-action key="save" display-name="Sign up" show="true" class="form-save btn-success" iconclass="fa fa-user-plus" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                                        </wm-liveform>
+                                    </wm-tabpane>
+                                </wm-tabs>
+                            </wm-linearlayoutitem>
+                        </wm-linearlayout>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

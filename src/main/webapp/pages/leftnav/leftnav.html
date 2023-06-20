@@ -1,0 +1,25 @@
+<wm-partial name="leftnav" type="leftnav">
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="list_dashboard">
+            <wm-anchor caption="Home" name="HomepageLink" iconclass="wi wi-home" on-click="Actions.goToPage_Main.invoke()" class="leftnav-link"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order" class="anchor-caption">
+            <wm-anchor caption="Events" name="EventsPageLink" iconclass="wi wi-event" on-click="Actions.goToPage_EventList.invoke()" class="leftnav-link"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order" class="anchor-caption">
+            <wm-anchor caption="Create Event" name="CreateEventsPageLink" iconclass="wi wi-add-circle-outline" on-click="Actions.goToPage_CreateEvent.invoke()" class="leftnav-link" width="100%"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order" class="anchor-caption">
+            <wm-anchor caption="Profile" name="UserProfileLink" iconclass="fa fa-user" on-click="Actions.goToPage_UserProfile.invoke()" class="leftnav-link" margin="unset unset unset 2px"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order" class="anchor-caption">
+            <wm-anchor caption="Logout" name="LogoutDialog" iconclass="wm-sl-r sl-logout" on-click="Actions.logoutAction.invoke()" class="leftnav-link"></wm-anchor>
+        </wm-nav-item>
+        <!--<wm-nav-item name="list_inventory">-->
+        <!--    <wm-anchor caption="" name="inventoryLink" iconclass=""></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <!--<wm-nav-item name="list_support">-->
+        <!--    <wm-anchor caption="" name="supportLink" iconclass=""></wm-anchor>-->
+        <!--</wm-nav-item>-->
+    </wm-nav>
+</wm-partial>

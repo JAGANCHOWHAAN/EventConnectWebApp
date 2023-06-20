@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="getEventDetailsByLoginId">
+        <![CDATA[
+        select * from EventDetail where User_Id=:id
+        ]]>
+    <query-param name="id" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="getEventDetailsByLoginId__count">
+        <![CDATA[
+        select count(*) from (select * from EventDetail where User_Id=:id) wmTempTable
+        ]]>
+    <query-param name="id" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="EventSpeakerDetails">
+        <![CDATA[
+        SELECT Speaker.*
+FROM Speaker
+INNER JOIN EventSpeaker
+ON Speaker.Id = EventSpeaker.Speaker_Id
+WHERE EventSpeaker.Event_Id = :EventID
+        ]]>
+    <query-param name="EventID" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="EventSpeakerDetails__count">
+        <![CDATA[
+        select count(*) from (SELECT Speaker.*
+FROM Speaker
+INNER JOIN EventSpeaker
+ON Speaker.Id = EventSpeaker.Speaker_Id
+WHERE EventSpeaker.Event_Id = :EventID) wmTempTable
+        ]]>
+    <query-param name="EventID" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="EventSpeakerDetails1">
+        <![CDATA[
+        SELECT Speaker.*
+FROM Speaker
+INNER JOIN EventSpeaker
+ON Speaker.Id = EventSpeaker.Speaker_Id
+WHERE EventSpeaker.Event_Id = :EventID AND EventSpeaker.Speaker_Id = :SpeakerID
+        ]]>
+    <query-param name="EventID" type="java.lang.String"/>
+    <query-param name="SpeakerID" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="EventSpeakerDetails1__count">
+        <![CDATA[
+        select count(*) from (SELECT Speaker.*
+FROM Speaker
+INNER JOIN EventSpeaker
+ON Speaker.Id = EventSpeaker.Speaker_Id
+WHERE EventSpeaker.Event_Id = :EventID AND EventSpeaker.Speaker_Id = :SpeakerID) wmTempTable
+        ]]>
+    <query-param name="EventID" type="java.lang.String"/>
+    <query-param name="SpeakerID" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="EventSpeakerDetailsEventID">
+        <![CDATA[
+        SELECT Speaker.*
+FROM Speaker
+INNER JOIN EventSpeaker
+ON Speaker.Id = EventSpeaker.Speaker_Id
+WHERE EventSpeaker.Event_Id = :EventID
+        ]]>
+    <query-param name="EventID" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="EventSpeakerDetailsEventID__count">
+        <![CDATA[
+        select count(*) from (SELECT Speaker.*
+FROM Speaker
+INNER JOIN EventSpeaker
+ON Speaker.Id = EventSpeaker.Speaker_Id
+WHERE EventSpeaker.Event_Id = :EventID) wmTempTable
+        ]]>
+    <query-param name="EventID" type="java.lang.String"/>
+    </sql-query>
+</hibernate-mapping>

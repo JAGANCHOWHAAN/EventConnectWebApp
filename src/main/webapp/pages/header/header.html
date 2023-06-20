@@ -1,0 +1,22 @@
+<wm-partial name="header" type="header">
+    <wm-layoutgrid name="headerlayout" class="color-header">
+        <wm-gridrow name="headerrow" class="headerrow">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="12">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow2" class="color-header">
+                        <wm-gridcolumn columnwidth="8" name="gridcolumn2" horizontalalign="left" class="logo-header">
+                            <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/logos/EventConnect_Logo__3_.png" class="app-logo" on-click="Actions.goToPage_Main.invoke()" cursor="pointer" margin="unset unset 4px unset"></wm-picture>
+                            <wm-label name="label2" caption="EVENT CONNECT" fontsize="20" color="#ffffff" fontfamily="League Spartan" class="brand-label"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="2" name="gridcolumn3" horizontalalign="right" class="btnd-grp">
+                            <wm-button class="btn-default" caption="Log In" type="button" margin="unset 0.5em" name="button5" on-click="Actions.navigatetoLoginPage.invoke()" show="false"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="2" name="gridcolumn4" horizontalalign="right" padding="unset 10px unset unset">
+                            <wm-label name="loginName" caption="bind:&quot;Signed in as &quot; + Variables.svGetLoginUserIdDetails.dataSet.firstName" class="loginName text-ellipsis" margin="20px unset unset unset" width="auto"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

@@ -1,0 +1,6 @@
+{
+  "id" : "svGoogleMapApi",
+  "type" : "RestService",
+  "title" : "svGoogleMapApi",
+  "mockEnabled" : false
+}

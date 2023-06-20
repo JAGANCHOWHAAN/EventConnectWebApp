@@ -1,0 +1,48 @@
+{
+  "username" : "{WM_CLOUD_MYSQL_USER_NAME}",
+  "password" : "{WM_CLOUD_MYSQL_PASSWORD}",
+  "url" : "jdbc:mariadb://{WM_CLOUD_MYSQL_HOST}/connectevent?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true",
+  "driverClass" : "org.mariadb.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "connectevent",
+  "packageName" : "com.eventconnect.connectevent",
+  "dbType" : "MySQL",
+  "host" : "{WM_CLOUD_MYSQL_HOST}",
+  "dbName" : "connectevent",
+  "port" : null,
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "Attendee",
+    "schema" : null
+  }, {
+    "table" : "EventDetail",
+    "schema" : null
+  }, {
+    "table" : "EventSpeaker",
+    "schema" : null
+  }, {
+    "table" : "Speaker",
+    "schema" : null
+  }, {
+    "table" : "UserDetail",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "update",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null,
+    "reImport" : false
+  },
+  "readOnly" : false,
+  "metadataDialect" : ""
+}

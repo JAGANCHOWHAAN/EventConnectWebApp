@@ -1,0 +1,7 @@
+{
+  "id" : "connectevent",
+  "type" : "DataService",
+  "packageNames" : [ "com.eventconnect.connectevent" ],
+  "title" : "connectevent",
+  "mockEnabled" : false
+}

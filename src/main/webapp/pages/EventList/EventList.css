@@ -1,0 +1,36 @@
+.eventpic{
+     background: transparent !important;
+     transition: transform 0.3s ease-out;
+}
+.eventpic:hover{
+    cursor: pointer;
+    box-shadow: 0 16px 64px -16px rgba(219,220,224,.24);  
+}
+.eventpic img:hover{
+    cursor: pointer;
+}
+.eventpic:hover{
+    transform: scale(1.03);
+}
+.card-content{
+    height: 205px;
+    padding: 20px !important;
+    background: white;
+}
+.card .app-card-image img{
+    height: 160px !important;
+    border-radius: 0px !important;
+}
+.filter-form{
+    position: fixed;
+}
+.app-date .app-dateinput{
+    padding-right: 0px;
+}
+.list-group + .panel-footer{
+    width: 710px;
+    margin-left: 13px;
+}
+.hosted-headline{
+    vertical-align: sub;
+}

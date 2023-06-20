@@ -1,0 +1,91 @@
+<wm-page pagetitle="Create Event" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-tabs type="static" statehandler="URL" name="tabs2">
+                <wm-tabpane name="tabpane4" title="Create Event" paneicon="wi wi-event-note">
+                    <wm-liveform errormessage="" title="" iconclass="" defaultmode="Edit" dataset="bind:Variables.ConnecteventEventDetailData.dataSet" captionalign="left" captionposition="top" name="EventCreationLiveForm" on-success="Actions.goToPage_EventList.invoke()">
+                        <wm-layoutgrid columns="3" name="layoutgrid2">
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn19" horizontalalign="left">
+                                    <wm-form-field name="title" displayname="Event Name" show="true" primary-key="false" generator="assigned" key="title" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="text" placeholder="Enter Event Name"
+                                        textalign="left" validationmessage="Please enter the name/title of the event you are hosting"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn20">
+                                    <wm-form-field name="about" displayname="About" show="true" primary-key="false" generator="assigned" key="about" type="text" readonly="false" required="true" widget="text" maxchars="2147483647" inputtype="text" placeholder="About Event"
+                                        autocomplete="false" autotrim="false" validationmessage="Please provide a brief description of the event"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn21">
+                                    <wm-form-field name="isOnline" displayname="Is Online" show="true" primary-key="false" generator="assigned" key="isOnline" type="boolean" readonly="false" required="false" widget="checkbox" placeholder="" validationmessage="Check the box if the event will be hosted online"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow8">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn22">
+                                    <wm-form-field name="meetingLink" displayname="Meeting Link" show="true" primary-key="false" generator="assigned" key="meetingLink" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="url"
+                                        placeholder="Enter value" validationmessage="Enter the meeting link or specify 'Offline' if the event is not going to be online"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn23">
+                                    <wm-form-field name="startDate" displayname="Start Date" show="true" primary-key="false" generator="assigned" key="startDate" type="date" readonly="false" required="true" widget="date" datepattern="MMM d, y" placeholder="Select date"
+                                        outputformat="yyyy-MM-dd" mindate="CURRENT_DATE" validationmessage="Event start date"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn24">
+                                    <wm-form-field name="endDate" displayname="End Date" show="true" primary-key="false" generator="assigned" key="endDate" type="date" readonly="false" required="true" widget="date" datepattern="MMM d, y" placeholder="Select date"
+                                        outputformat="yyyy-MM-dd" mindate="CURRENT_DATE" validationmessage="Event end date"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow9">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn25">
+                                    <wm-form-field name="fee" displayname="Fee" show="true" primary-key="false" generator="assigned" key="fee" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="text" placeholder="Enter value"
+                                        validationmessage="Enter the fee amount or specify 'Free' if the event is free of charge"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn26">
+                                    <wm-form-field name="startTime" displayname="Start Time" show="true" primary-key="false" generator="assigned" key="startTime" type="time" readonly="false" required="true" widget="time" timepattern="h:mm a" placeholder="Select time"
+                                        outputformat="HH:mm:ss" validationmessage="Event start time"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn27">
+                                    <wm-form-field name="endTime" displayname="End Time" show="true" primary-key="false" generator="assigned" key="endTime" type="time" readonly="false" required="true" widget="time" timepattern="h:mm a" placeholder="Select time"
+                                        outputformat="HH:mm:ss" validationmessage="Event end time"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow10">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn28">
+                                    <wm-form-field name="location" displayname="Location" show="true" primary-key="false" generator="assigned" key="location" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="text" placeholder="Enter venue of the event"
+                                        validationmessage="Help people in the area to discover your event and let attendees know where to show up"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn29">
+                                    <wm-form-field name="poster" displayname="Poster" show="true" primary-key="false" generator="assigned" key="poster" type="text" readonly="false" required="true" widget="text" maxchars="4096" inputtype="url" placeholder="Enter poster url"
+                                        validationmessage="Provide url of event poster"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn30">
+                                    <wm-form-field name="organizerName" displayname="Organization Name" show="true" primary-key="false" generator="assigned" key="organizerName" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="text"
+                                        placeholder="Enter Organization Name" validationmessage="Please enter the name of the organization associated with the event"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow11">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn31">
+                                    <wm-form-field name="organizerEmail" displayname="Organization Email" show="true" primary-key="false" generator="assigned" key="organizerEmail" type="string" readonly="false" required="true" widget="text" maxchars="255"
+                                        inputtype="email" placeholder="Enter value" validationmessage="Provide the email address of the organization"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn32">
+                                    <wm-form-field name="organizerPhNo" displayname="Organization Ph No" show="true" primary-key="false" generator="assigned" key="organizerPhNo" type="string" readonly="false" required="true" widget="text" maxchars="15" inputtype="number"
+                                        placeholder="Enter value" validationmessage="Provide the phone number of the organization"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn33">
+                                    <wm-form-field name="UserId" key="UserId" displayname="User Id" show="false" type="integer" defaultvalue="bind:Variables.loggedInUser.dataSet.id" widget="number" inputtype="number" placeholder="Enter value" readonly="true"></wm-form-field>
+                                    <wm-form-field name="status" displayname="Status" show="false" primary-key="false" generator="assigned" key="status" type="string" readonly="false" required="false" widget="text" maxchars="9" defaultvalue="upcoming"
+                                        inputtype="text" placeholder="Enter value"></wm-form-field>
+                                    <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+                        <wm-form-action key="save" display-name="Host" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                    </wm-liveform>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane5" title="Add Speaker" paneicon="wi wi-person-add"></wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

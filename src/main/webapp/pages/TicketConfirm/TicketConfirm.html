@@ -1,0 +1,67 @@
+<wm-page pagetitle="Ticket Confirm" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" padding="2em 5em">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1" class="underline">
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn2">
+                        <wm-picture resizemode="cover" name="picture1" height="40px" picturesource="resources/images/imagelists/check-mark.png" margin="unset unset 5px unset"></wm-picture>
+                        <wm-label padding="unset 0.5em" name="label1" caption="Your Booking is Confirmed!" fontsize="28" fontfamily="Open Sans" color="#262323"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn5" horizontalalign="right">
+                        <wm-label padding="unset 0.5em" name="label2" caption="EVENT CONNECT" fontsize="20" fontfamily="League Spartan" fontweight="bold" color="#000000"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-container name="container2">
+                    <wm-layoutgrid name="layoutgrid2">
+                        <wm-gridrow name="gridrow2" padding="10px unset 2px unset">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                                <wm-label name="label3" caption="Your booking for" fontsize="18" fontweight="bold"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn4"></wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn5_1">
+                                <wm-label name="EventTitle" caption="bind:Variables.svEventDetails.dataSet.title" fontsize="24" fontfamily="sans-serif" fontweight="bold" color="#000000"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn6"></wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-container>
+                <wm-container name="container2_1">
+                    <wm-layoutgrid name="layoutgrid3">
+                        <wm-gridrow name="gridrow4" padding="10px unset 2px unset">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                <wm-label name="dateDay" caption="bind:Variables.svEventDetails.dataSet.startDate | toDate: 'EEE, dd MMM yyyy'" fontsize="18" color="#000000"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn8"></wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                                <wm-icon name="icon1" iconclass="wi wi-access-time" color="#000000"></wm-icon>
+                                <wm-label name="Time" caption="bind:Variables.svEventDetails.dataSet.startTime | toDate: 'hh:mm a'" fontsize="14" color="#000000" margin="unset unset 10px unset"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn10"></wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-container>
+                <wm-container name="container3">
+                    <wm-layoutgrid name="layoutgrid4">
+                        <wm-gridrow name="gridrow6" padding="10px unset 2px unset">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn11">
+                                <wm-label name="Venue" caption="Venue" fontsize="18" color="#000000"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn12"></wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow7">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                                <wm-icon name="icon2" iconclass="wi wi-location-on" color="#000000"></wm-icon>
+                                <wm-label name="Location" caption="bind:Variables.svEventDetails.dataSet.location" fontsize="14" color="#000000" margin="unset unset 10px unset"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn14"></wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-container>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

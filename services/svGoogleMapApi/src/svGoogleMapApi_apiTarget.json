@@ -1,0 +1,222 @@
+{
+  "basePath" : "${rest.svGoogleMapApi.basepath}",
+  "paths" : {
+    "/api/geocode/json" : {
+      "x-WM-BASE_PATH" : "/api/geocode/json",
+      "x-WM-TAG" : "svGoogleMapApi",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "svGoogleMapApi_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "address",
+          "format" : "string",
+          "description" : "address",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "key",
+          "format" : "string",
+          "description" : "key",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "svGoogleMapApi" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.svGoogleMapApi.scheme}://${rest.svGoogleMapApi.host}${rest.svGoogleMapApi.basepath}/api/geocode/json"
+    }
+  },
+  "host" : "${rest.svGoogleMapApi.host}",
+  "schemes" : [ "${rest.svGoogleMapApi.scheme}" ],
+  "definitions" : {
+    "Response.resultsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.resultsEntryItem",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "address_components", "formatted_address", "geometry", "place_id", "types" ],
+      "properties" : {
+        "formatted_address" : {
+          "type" : "string"
+        },
+        "types" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "geometry" : {
+          "$ref" : "#/definitions/Response.geometry"
+        },
+        "address_components" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.address_componentsEntryItem"
+          }
+        },
+        "place_id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.geometry" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.geometry",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "bounds", "location", "location_type", "viewport" ],
+      "properties" : {
+        "viewport" : {
+          "$ref" : "#/definitions/Response.viewport"
+        },
+        "bounds" : {
+          "$ref" : "#/definitions/Response.bounds"
+        },
+        "location" : {
+          "$ref" : "#/definitions/Response.location"
+        },
+        "location_type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.bounds" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.bounds",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "northeast", "southwest" ],
+      "properties" : {
+        "southwest" : {
+          "$ref" : "#/definitions/Response.southwest"
+        },
+        "northeast" : {
+          "$ref" : "#/definitions/Response.northeast"
+        }
+      }
+    },
+    "Response.northeast" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.northeast",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "Response.location" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.location",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "Response.address_componentsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.address_componentsEntryItem",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "long_name", "short_name", "types" ],
+      "properties" : {
+        "types" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "short_name" : {
+          "type" : "string"
+        },
+        "long_name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.viewport" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.viewport",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "northeast", "southwest" ],
+      "properties" : {
+        "southwest" : {
+          "$ref" : "#/definitions/Response.southwest"
+        },
+        "northeast" : {
+          "$ref" : "#/definitions/Response.northeast"
+        }
+      }
+    },
+    "Response.southwest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.Response.southwest",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "svGoogleMapApi.RootResponse",
+      "x-WM-TAGS" : [ "svGoogleMapApi" ],
+      "required" : [ "results", "status" ],
+      "properties" : {
+        "results" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.resultsEntryItem"
+          }
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "db684197-f16a-4d1c-a0f9-25745f793176",
+    "x-WM-SERVICE_ID" : "googleapis",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "svGoogleMapApi"
+  } ]
+}

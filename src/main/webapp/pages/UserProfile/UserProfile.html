@@ -1,0 +1,231 @@
+<wm-page pagetitle="User Profile" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn5" padding="0px 10px">
+                        <wm-layoutgrid name="layoutgrid3" class="profile">
+                            <wm-gridrow name="gridrow10_1">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn10_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn11">
+                                    <wm-picture resizemode="cover" name="picture1" picturesource="resources/images/imagelists/user.png" height="50px" padding="5px unset unset 10px"></wm-picture>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn18"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow11"></wm-gridrow>
+                            <wm-gridrow name="gridrow17">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn24" horizontalalign="center">
+                                    <wm-label padding="0.75em 0.5em unset 0.5em" name="fullName" caption="Full Name:"></wm-label>
+                                    <wm-label name="label11" caption="bind:Variables.svGetLoginUserIdDetails.dataSet.firstName + &quot; &quot; + Variables.svGetLoginUserIdDetails.dataSet.lastName"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow15">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn22" horizontalalign="center">
+                                    <wm-label padding="unset 0.5em" name="phoneNumber" caption="Phone Number:"></wm-label>
+                                    <wm-label name="label8" caption="bind:Variables.svGetLoginUserIdDetails.dataSet.phoneNumber"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow14">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn21" horizontalalign="center">
+                                    <wm-label padding="unset 0.5em" name="emailId" caption="EmailID:"></wm-label>
+                                    <wm-label name="label7" caption="bind:Variables.svGetLoginUserIdDetails.dataSet.emailId"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-layoutgrid name="layoutgrid4">
+                            <wm-gridrow name="gridrow12" padding="20px unset 10px unset">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn14" padding="unset unset unset 4px">
+                                    <wm-picture resizemode="cover" name="picture2" width="20px" picturesource="resources/images/imagelists/election-event-on-a-calendar-with-star-symbol.png" class="myevent-pic" margin="0px"></wm-picture>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn30">
+                                    <wm-label name="label18" caption="Manage your events" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow13">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn25">
+                                    <wm-list listclass="list-group" itemsperrow="xs-1 sm-1 md-1 lg-1" template="true" template-name="Designation Card" class="list-card" statehandler="URL" dataset="bind:Variables.svGetEventDetailsByLoginId.dataSet" navigation="Basic"
+                                        name="eventsCard" orderby="id:desc" nodatamessage="You don't have any events yet. create one!" showrecordcount="false" navigationalign="center" horizontalalign="left">
+                                        <wm-listtemplate layout="media" name="listtemplate2">
+                                            <wm-card name="Picture" picturesource="bind:Variables.svGetEventDetailsByLoginId.dataSet[$i].poster" class="myevents" imageheight="225px">
+                                                <wm-card-content name="card_content2">
+                                                    <wm-layoutgrid name="layoutgrid10">
+                                                        <wm-gridrow name="gridrow24">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn32">
+                                                                <wm-layoutgrid name="layoutgrid11">
+                                                                    <wm-gridrow name="gridrow26">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn36">
+                                                                            <wm-label class="h4" margin="0px unset" caption="bind:Variables.svGetEventDetailsByLoginId.dataSet[$i].title" whitespace="nowrap" name="label12" color="#21ADF0" fontsize="1.25" fontweight="bold"
+                                                                                fontunit="em"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow name="gridrow27">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn37">
+                                                                            <wm-label caption="bind:Variables.svGetEventDetailsByLoginId.dataSet[$i].startDate | toDate: 'EEE, MMM dd'" name="label13" fontsize="1" fontunit="em" color="#3387ac"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow25">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn34">
+                                                                <wm-layoutgrid name="layoutgrid12">
+                                                                    <wm-gridrow name="gridrow28">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn39" horizontalalign="right">
+                                                                            <wm-button class="btn-default" caption="Edit" type="button" name="Edit" iconclass="fa fa-edit" on-click="Widgets.EventUpdateDialog.open()" backgroundcolor="#007bff" color="#000000"
+                                                                                margin="unset 5px unset unset"></wm-button>
+                                                                            <wm-button class="btn-default" caption="Delete" type="button" name="Delete" iconclass="wi wi-delete" show="true" backgroundcolor="red" color="#000000"></wm-button>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-card-content>
+                                            </wm-card>
+                                            <wm-container name="container2"></wm-container>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1" padding="0px 10px">
+                        <wm-form errormessage="" captionposition="top" title="Update User Details" enctype="application/x-www-form-urlencoded" method="patch" dataset="bind:Variables.svUpdateUserDetails.dataSet" captionalign="left" name="patchUserDetailForm1"
+                            iconclass="" postmessage="Details Updated successfully" messagelayout="Toaster" class="widget-id530">
+                            <wm-layoutgrid columns="1" name="layoutgrid2">
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn4">
+                                        <wm-form-field name="UserDetail_firstName" readonly="false" displayname="First Name" key="UserDetail.firstName" type="string" show="true" widget="text" defaultvalue="bind:Variables.svGetLoginUserIdDetails.dataSet.firstName"
+                                            inputtype="text" placeholder="Enter First Name" autocomplete="false" width="100%"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn5_1">
+                                        <wm-form-field name="UserDetail_lastName" readonly="false" displayname="Last Name" key="UserDetail.lastName" type="string" show="true" widget="text" defaultvalue="bind:Variables.svGetLoginUserIdDetails.dataSet.lastName"
+                                            inputtype="text" placeholder="Enter Last Name" autocomplete="false" autotrim="false" width="100%"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow6">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                                        <wm-form-field name="UserDetail_emailId" readonly="false" displayname="Email Id" key="UserDetail.emailId" type="string" show="true" widget="text" defaultvalue="bind:Variables.svGetLoginUserIdDetails.dataSet.emailId"
+                                            inputtype="email" placeholder="Enter EmailID" autocomplete="false" autotrim="false" width="100%"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow7">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                        <wm-form-field name="UserDetail_phoneNumber" readonly="false" displayname="Phone Number" key="UserDetail.phoneNumber" type="string" show="true" widget="text" defaultvalue="bind:Variables.svGetLoginUserIdDetails.dataSet.phoneNumber"
+                                            inputtype="text" placeholder="Enter Phone Number" autocomplete="false" autotrim="false" width="100%"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow8">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                                        <wm-form-field name="UserDetail_password" readonly="false" displayname="Password" key="UserDetail.password" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetLoginUserIdDetails.dataSet.password"
+                                            inputtype="password" placeholder="Enter value" autocomplete="false" autotrim="false"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow9">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                        <wm-form-field name="UserDetail_confirmPassword" readonly="false" displayname="Confirm Password" key="UserDetail.confirmPassword" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetLoginUserIdDetails.dataSet.confirmPassword"
+                                            inputtype="text" placeholder="Enter value" autocomplete="false" autotrim="false"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow10">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                                        <wm-form-field name="UserDetail_id" readonly="true" displayname="Id" key="UserDetail.id" type="integer" show="false" widget="number" textalign="left" defaultvalue="bind:Variables.svGetLoginUserIdDetails.dataSet.id"
+                                            inputtype="number" placeholder="Enter value"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                            <wm-form-action key="save" display-name="Update Details" show="true" class="form-save btn-success btn-update" iconclass="wi wi-update fa-lg" title="Update" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                        </wm-form>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-confirmdialog on-ok="Actions.logoutAction.invoke()" on-cancel="Actions.goToPage_Main.invoke()" name="logoutConfirm" title="Confirm Logout" message="Are you sure to logout.?"></wm-confirmdialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Update Event Details" iconclass="wi wi-file-text" name="EventUpdateDialog" width="700px">
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button3"></wm-button>
+        </wm-dialogactions>
+        <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="patch" dataset="bind:Variables.svUpdateEventDetail.dataSet" captionalign="left" name="patchEventDetailForm1" messagelayout="Toaster" postmessage="Event Details updated successfully"
+            on-success="Widgets.EventUpdateDialog.close()">
+            <wm-layoutgrid columns="3" name="layoutgrid11_1">
+                <wm-gridrow name="gridrow29">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn36_1">
+                        <wm-form-field name="EventDetail_title" readonly="false" displayname="Event Name" key="EventDetail.title" type="string" show="true" widget="text" defaultvalue="bind:Widgets.eventsCard.selecteditem.title" inputtype="text" placeholder="Enter Event Name"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn37_1">
+                        <wm-form-field name="EventDetail_about" readonly="false" displayname="About" key="EventDetail.about" type="string" show="true" widget="text" defaultvalue="bind:Widgets.eventsCard.selecteditem.about" inputtype="text" placeholder="Describe your event"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn38_1">
+                        <wm-form-field name="EventDetail_isOnline" readonly="false" displayname="Is Online" key="EventDetail.isOnline" type="boolean" show="true" widget="checkbox" placeholder="" defaultvalue="bind:Widgets.eventsCard.selecteditem.isOnline"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow30">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn39_1">
+                        <wm-form-field name="EventDetail_fee" readonly="false" displayname="Fee" key="EventDetail.fee" type="string" show="true" widget="text" inputtype="text" placeholder="Enter fee details" defaultvalue="bind:Widgets.eventsCard.selecteditem.fee"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn40">
+                        <wm-form-field name="EventDetail_startDate" readonly="false" displayname="Start Date" key="EventDetail.startDate" type="date" show="true" widget="date" datepattern="MMM d, y" placeholder="Select start date" defaultvalue="bind:Widgets.eventsCard.selecteditem.startDate"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn41">
+                        <wm-form-field name="EventDetail_endDate" readonly="false" displayname="End Date" key="EventDetail.endDate" type="date" show="true" widget="date" datepattern="MMM d, y" placeholder="Select end date" defaultvalue="bind:Widgets.eventsCard.selecteditem.endDate"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow31">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn42">
+                        <wm-form-field name="EventDetail_startTime" readonly="false" displayname="Start Time" key="EventDetail.startTime" type="time" show="true" widget="time" timepattern="h:mm a" placeholder="Select start time" defaultvalue="bind:Widgets.eventsCard.selecteditem.startTime"
+                            class="time"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn43">
+                        <wm-form-field name="EventDetail_endTime" readonly="false" displayname="End Time" key="EventDetail.endTime" type="time" show="true" widget="time" timepattern="h:mm a" placeholder="Select end time" defaultvalue="bind:Widgets.eventsCard.selecteditem.endTime"
+                            class="time"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn44">
+                        <wm-form-field name="EventDetail_location" readonly="false" displayname="Location" key="EventDetail.location" type="string" show="true" widget="text" inputtype="text" placeholder="Location of the event" defaultvalue="bind:Widgets.eventsCard.selecteditem.location"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow32">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn45">
+                        <wm-form-field name="EventDetail_organizerName" readonly="false" displayname="Organizer Name" key="EventDetail.organizerName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter Organizer Name" defaultvalue="bind:Widgets.eventsCard.selecteditem.organizerName"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn46">
+                        <wm-form-field name="EventDetail_organizerEmail" readonly="false" displayname="Organizer Email" key="EventDetail.organizerEmail" type="string" show="true" widget="text" inputtype="text" placeholder="Organizer EmailID" defaultvalue="bind:Widgets.eventsCard.selecteditem.organizerEmail"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn47">
+                        <wm-form-field name="EventDetail_organizerPhNo" readonly="false" displayname="Organizer Ph No" key="EventDetail.organizerPhNo" type="string" show="true" widget="text" inputtype="text" placeholder="Organizer Mobile Number" defaultvalue="bind:Widgets.eventsCard.selecteditem.organizerPhNo"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow33">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn48">
+                        <wm-form-field name="EventDetail_poster" readonly="false" displayname="Poster" key="EventDetail.poster" type="string" show="true" widget="text" inputtype="text" placeholder="Poster url of your event" defaultvalue="bind:Widgets.eventsCard.selecteditem.poster"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn49">
+                        <wm-form-field name="EventDetail_meetingLink" readonly="false" displayname="Meeting Link" key="EventDetail.meetingLink" type="string" show="true" widget="text" inputtype="text" placeholder="Meeting link" defaultvalue="bind:Widgets.eventsCard.selecteditem.meetingLink"
+                            width="180px"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn50">
+                        <wm-form-field name="EventDetail_userId" readonly="true" displayname="User Id" key="EventDetail.userId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Widgets.eventsCard.selecteditem.userId"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Update" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Update" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+</wm-page>

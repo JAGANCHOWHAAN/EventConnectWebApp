@@ -1,0 +1,17 @@
+[ {
+  "name" : "googlemaps",
+  "version" : "7.0.0",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "material-2.0",
+  "version" : "2.1.0",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "THEME",
+  "artifactDependencyList" : null
+} ]

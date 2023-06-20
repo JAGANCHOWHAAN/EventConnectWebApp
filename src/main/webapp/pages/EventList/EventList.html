@@ -1,0 +1,114 @@
+<wm-page pagetitle="Event List" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1" class="content">
+            <!--adding row in between-->
+            <wm-layoutgrid name="layoutgrid7">
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn22" horizontalalign="left">
+                        <wm-layoutgrid name="layoutgrid9_1" class="outerevent">
+                            <wm-gridrow name="gridrow12">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn25_1" class="eventside">
+                                    <wm-picture resizemode="cover" name="picture2" class="trend" width="40px" picturesource="resources/images/imagelists/eventhost.png" padding="unset unset unset 12px"></wm-picture>
+                                    <wm-label name="label18_2" caption="Hosted Events" fontweight="bold" padding="unset unset 5px 5px" color="#000000" fontsize="18" class="hosted-headline"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow17">
+                                <wm-gridcolumn columnwidth="9" name="gridcolumn36" padding="unset 15px unset unset">
+                                    <wm-list listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-3" template="true" template-name="Personal Spotlight" class="list-card" statehandler="URL" name="EventDetailList1" dataset="bind:Widgets.EventDetailFilter1.result"
+                                        navigation="Pager" pagesize="9" dateformat="dd/MM/yyyy" loadingdatamsg="Loading events" paginationclass="EventListPage">
+                                        <wm-listtemplate layout="media" name="listtemplate2">
+                                            <wm-card name="Picture" picturesource="bind:Widgets.EventDetailFilter1.result[$i].poster" on-click="Actions.goToPage_EventDetails.invoke()" class="eventpic">
+                                                <wm-card-content name="card_content2" class="card-content">
+                                                    <wm-layoutgrid name="layoutgrid6">
+                                                        <wm-gridrow name="gridrow7">
+                                                            <wm-gridcolumn columnwidth="1" name="gridcolumn20">
+                                                                <wm-icon name="icon5" iconclass="wi wi-event" color="#000000"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="11" name="gridcolumn12">
+                                                                <wm-label padding="unset 0.5em" name="Title" caption="bind:Widgets.EventDetailFilter1.result[$i].title" fontunit="em" fontsize="1.25" fontweight="bold" color="#21ADF0"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow11_1">
+                                                            <wm-gridcolumn columnwidth="1" name="gridcolumn21">
+                                                                <wm-icon name="icon6" iconclass="wi wi-access-time" color="#000000"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="11" name="gridcolumn19">
+                                                                <wm-label padding="unset 0.5em" name="DateDay" caption="bind:Widgets.EventDetailFilter1.result[$i].startDate | toDate: 'EEE, MMM dd'" fontunit="em" fontsize="1" color="#3387ac"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow8">
+                                                            <wm-gridcolumn columnwidth="1" name="gridcolumn22_1">
+                                                                <wm-icon name="icon7" iconclass="wi wi-location-on" color="#000000"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="11" name="gridcolumn14">
+                                                                <wm-label padding="unset 0.5em" name="Location" caption="bind:Widgets.EventDetailFilter1.result[$i].location" class="text-ellipsis" fontsize="1" color="#000000" fontunit="em"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow9">
+                                                            <wm-gridcolumn columnwidth="1" name="gridcolumn23">
+                                                                <wm-icon name="icon8" iconclass="wm-sl-r sl-accounting-bill" color="#000000"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="11" name="gridcolumn16">
+                                                                <wm-label padding="unset 0.5em" name="Fee" caption="bind:Widgets.EventDetailFilter1.result[$i].fee" fontsize="1" fontunit="em" color="#000000"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow10">
+                                                            <wm-gridcolumn columnwidth="1" name="gridcolumn24">
+                                                                <wm-icon name="icon9" iconclass="wm-sl-r sl-startup" color="#000000"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="11" name="gridcolumn18">
+                                                                <wm-label padding="unset 0.5em" name="Organization" caption="bind:Widgets.EventDetailFilter1.result[$i].organizerName" fontsize="1" fontunit="em" fontweight="bold" color="rgb(136 145 149)"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-card-content>
+                                            </wm-card>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn37_1">
+                                    <wm-livefilter name="EventDetailFilter1" title="Add Filter" dataset="bind:Variables.ConnecteventEventDetailData1.dataSet" captionalign="left" captionposition="top" autoupdate="true" pagesize="9" class="filter-form" margin="13px unset unset unset"
+                                        autocomplete="false">
+                                        <wm-layoutgrid columns="1" name="layoutgrid5">
+                                            <wm-gridrow name="gridrow9_1">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn15">
+                                                    <wm-filter-field name="title" field="title" displayname="Title" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="title" placeholder="Enter value"
+                                                        matchmode="anywhere" width="100px"></wm-filter-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn20_1">
+                                                    <wm-filter-field name="location" field="location" displayname="Location" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="location"
+                                                        placeholder="Enter value" matchmode="anywhere" width="100px"></wm-filter-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow11_2">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                                    <wm-filter-field name="fee" field="fee" displayname="Fee" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="fee" placeholder="Enter value"
+                                                        matchmode="startignorecase" width="100px"></wm-filter-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn21_1">
+                                                    <wm-filter-field name="startDate" field="startDate" displayname="Start Date" widget="date" is-range="false" type="date" is-primary-key="false" generator="assigned" show="true" datepattern="MMM d, y" key="startDate"
+                                                        placeholder="Select date" width="100px"></wm-filter-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow13">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn19_1">
+                                                    <wm-filter-field name="isOnline" field="isOnline" displayname="Is Online" widget="checkbox" is-range="false" type="boolean" is-primary-key="false" generator="assigned" show="true" key="isOnline" placeholder=""></wm-filter-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                        <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" title="Filter" action="filter()" disabled="false" widget-type="button" type="button"></wm-filter-action>
+                                        <wm-filter-action key="clear" display-name="Clear" show="true" class="btn-default" iconclass="wi wi-trash" title="Clear" action="clearFilter()" disabled="false" widget-type="button" type="button"></wm-filter-action>
+                                    </wm-livefilter>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-layoutgrid name="layoutgrid9"></wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

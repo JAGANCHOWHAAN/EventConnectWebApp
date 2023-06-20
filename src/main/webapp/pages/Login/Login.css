@@ -1,0 +1,32 @@
+.wm-app .app-tabs .tab-content .panel .panel-footer{
+    text-align: center;
+}
+ .wm-app .app-liveform .panel-footer.form-action .btn{
+    background-color: rgb(51, 135, 172);
+    font-size: 1.2em;
+    width: 100%;
+    border-color: transparent !important;
+    margin: 0;
+    padding: 10px 30px;
+ }
+ .login{
+     border-color: transparent;
+ }
+ .wm-app .app-composite-widget.caption-top .control-label{
+     color: black !important;
+ }
+ .logingrid{
+     display: flex;
+    justify-content: center;
+    top: 7%;
+ }
+ .tab{
+     border-radius: 5px;
+ }
+.login-img{
+    width: -webkit-fill-available;
+    height: 496px;
+}
+.wm-app .app-page-login .tab{
+    border-radius: none !important;
+}

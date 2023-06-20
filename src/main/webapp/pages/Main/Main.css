@@ -1,0 +1,85 @@
+.wm-app .app-header .nav > li:last-child a::before{
+    height: 0px !important;
+}
+.homepage-img{
+    height: 250px;
+    width: 500px;
+    border-radius: 5px;
+}
+.text-label3{
+    padding: 5px 5px 5px 20px;
+    font-size: 20px;
+    font-family: Sans-Serif;
+    font-weight: bold;
+}
+.wm-app .btn-default:hover{
+    background: black !important;
+    color: white;
+}
+.app-carousel-item.item img{
+    height: 300px;
+    padding: 0px 14px 0px 14px;
+    border-radius: 5px;
+}
+.wm-app .carousel-indicators{
+    display: none;
+}
+.image-slide{
+    margin-top: 20px;
+}
+.imagecenter{
+    text-align: center;
+}
+.imagestop{
+    margin-top: 15px;
+}
+.labeltxtevt{
+    color: black;
+    font-size: 20px;
+    font-family: Sans-Serif;
+    font-weight: bold;
+}
+.labeltxt{
+    color: black;
+    font-size: 20px;
+    font-family: Sans-Serif;
+}
+.imagecon{
+    background-color: rgb(238, 237, 237);
+    border-radius: 10px;
+    margin: 50px 14px 14px 14px;
+    padding: 30px;
+}
+.imglbl{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'robotoregular';
+    color: black;
+}
+.imgaround{
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+.engimg{
+    transition: transform 0.2s ease-in-out;
+}
+.engimg:hover{
+    transform: scale(0.9);
+}
+.disbtn{
+    background: rgb(51, 135, 172);
+    font-weight: 600;
+    color:white;
+}
+.nobtn{
+    border-radius: 5px;
+}
+.mainlbl{
+    width: 100px;
+    background: white;
+    color: black;
+    box-shadow: 0 0 22px 2px white;
+    border-radius: 5px;
+    padding: 10px;
+}

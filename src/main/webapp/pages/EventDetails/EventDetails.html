@@ -1,0 +1,395 @@
+<wm-page pagetitle="Event Details" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1" class="completePage">
+            <wm-layoutgrid name="layoutgrid7">
+                <wm-gridrow name="gridrow21" padding="unset 0.75em">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn47_1">
+                        <wm-anchor margin="unset unset 10px unset" name="BackToEvent" caption="Back To Events" on-click="Actions.goToPage_EventList.invoke()" iconclass="wi wi-event-available" class="btn-link"></wm-anchor>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-layoutgrid name="layoutgrid2" class="outerdiv">
+                <wm-gridrow name="gridrow3" class="innerdiv" padding="unset 0.75em">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn5">
+                        <wm-picture resizemode="cover" name="picture1" picturesource="bind:Variables.svEventDetails.dataSet.poster" class="detailevent-logo image-radius" height="91" width="183"></wm-picture>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn6">
+                        <wm-layoutgrid name="layoutgrid2_1" class="dateTitle">
+                            <wm-gridrow name="gridrow2">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn4" padding="22px unset unset unset">
+                                    <wm-label padding="unset 0.5em" name="title" caption="bind:Variables.svEventDetails.dataSet.title" class="titlehead"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow3_1">
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn6_1">
+                                    <wm-label padding="unset 0.5em" name="Date" caption="bind:Variables.svEventDetails.dataSet.startDate | toDate: 'EEE MMM dd, yyyy'" class="date"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn8" horizontalalign="left">
+                                    <wm-button class="btn-default sharebtn" caption="" type="button" margin="unset 0.5em" name="ShareEvent" textalign="center" iconclass="fa fa-share-square-o fa-lg" backgroundcolor="#ffffff" padding="3px" bordercolor="#ffffff"
+                                        on-click="Widgets.ShareDialog.open()"></wm-button>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn9"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn7"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn13" horizontalalign="right" class="ticketcol" padding="22px unset unset unset">
+                        <wm-button class="btn-default ticketbtn" caption="Ticket" type="button" margin="unset 0.5em" name="Ticket" iconclass="fa fa-ticket fa-lg" on-click="Widgets.TicketDialog.open()"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-layoutgrid name="layoutgrid3" class="detouter">
+                <wm-gridrow name="gridrow4" class="eventcard">
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn9_1" class="leftside" padding="unset 0.75em">
+                        <wm-layoutgrid name="layoutgrid6_1" class="card-around">
+                            <wm-gridrow name="gridrow11_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn28_1">
+                                    <wm-picture resizemode="cover" name="eventpic" picturesource="bind:Variables.svEventDetails.dataSet.poster" class="eventpic image-radius"></wm-picture>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow12_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn30_1">
+                                    <wm-label padding="0.5em" name="fullTitle" caption="bind:Variables.svEventDetails.dataSet.title" fontsize="18" color="#000000" fontweight="bold"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow13_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn31_2">
+                                    <wm-label padding="unset 0.5em" name="AboutEvent" caption="About this Event" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow15">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn35_1">
+                                    <wm-label padding="unset 0.5em" name="about" caption="bind:Variables.svEventDetails.dataSet.about"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow14">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn39" horizontalalign="center">
+                                    <wm-label name="eventfee" caption="Fee:" fontsize="15" color="#000000" padding="unset 0.5em unset unset"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn38_1">
+                                    <wm-label padding="2px unset unset unset" name="feeevent" caption="bind:Variables.svEventDetails.dataSet.fee"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn37"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn33_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn34_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow16">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn40" class="text-ellipsis">
+                                    <wm-label padding="unset 0.5em unset 0.4em" name="MeetingLink" caption="Meet Link:" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn41">
+                                    <wm-anchor name="meetLink" caption="bind:Variables.svEventDetails.dataSet.meetingLink"></wm-anchor>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow17_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn45" padding="10px unset unset unset">
+                                    <wm-label padding="unset 0.5em" name="Organizer" caption="Hosted By:" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow18">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn46">
+                                    <wm-label padding="unset 0.5em" name="OrganizerName" caption="Name:"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn47">
+                                    <wm-label name="OrgName" caption="bind:Variables.svEventDetails.dataSet.organizerName"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow19">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn48">
+                                    <wm-label padding="unset 0.5em" name="OrganizerEmail" caption="Email:"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn49">
+                                    <wm-label name="OrgEmail" caption="bind:Variables.svEventDetails.dataSet.organizerEmail"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow20">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn50">
+                                    <wm-label padding="unset unset unset 0.5em" name="OrganizerPhone" caption="Phone:"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn51">
+                                    <wm-label name="OrgPh" caption="bind:Variables.svEventDetails.dataSet.organizerPhNo"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-layoutgrid name="layoutgrid10">
+                            <wm-gridrow name="gridrow30">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn67_1" class="speakersection">
+                                    <wm-label padding="unset 0.5em" name="label33" caption="Speaker Detail" color="#000000" fontsize="15"></wm-label>
+                                    <wm-list listclass="list-group" template="true" template-name="I Card" itemsperrow="xs-1 sm-2 md-4 lg-6" class="list-card" statehandler="URL" dataset="bind:Variables.svGetSpeakerDetailsByEventId.dataSet"
+                                        navigation="None" name="list2" nodatamessage="No speakers found for this event">
+                                        <wm-listtemplate layout="media" name="listtemplate2">
+                                            <wm-card name="Picture" picturesource="bind:Variables.svGetSpeakerDetailsByEventId.dataSet[$i].photoUrl">
+                                                <wm-card-content name="card_content2">
+                                                    <wm-label caption="bind:Variables.svGetSpeakerDetailsByEventId.dataSet[$i].name" name="Name" margin="0px unset unset unset" class="h4" whitespace="nowrap"></wm-label>
+                                                    <wm-layoutgrid columns="2" name="layoutgrid11">
+                                                        <wm-gridrow name="gridrow30_1">
+                                                            <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn66_1">
+                                                                <wm-icon iconclass="wi wi-contact-mail fa-2x" class="text-muted" name="icon4"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn67_2">
+                                                                <wm-label name="ID" caption="ID" fontunit="em" class="text-muted p" whitespace="nowrap"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow31">
+                                                            <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn68">
+                                                                <wm-icon iconclass="wi wi-user fa-2x" class="text-muted" name="icon5"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn69">
+                                                                <wm-label name="JobTitle" caption="bind:Variables.svGetSpeakerDetailsByEventId.dataSet[$i].bio" fontunit="em" class="text-muted p"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow32">
+                                                            <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn70">
+                                                                <wm-icon iconclass="wi wi-dashboard fa-2x" class="text-muted" name="icon6"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn71">
+                                                                <wm-label name="Department" caption="Department" fontunit="em" class="text-muted"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-card-content>
+                                                <wm-card-footer horizontalalign="center" name="card_footer2">
+                                                    <wm-buttongroup class="btn-group-justified" horizontalalign="center" name="buttongroup2">
+                                                        <wm-anchor class="btn btn-transparent text-muted" caption="" iconclass="wi wi-mail fa-2x" name="anchor7"></wm-anchor>
+                                                        <wm-anchor class="btn btn-transparent" caption="" iconclass="wi wi-call fa-2x" name="anchor8"></wm-anchor>
+                                                        <wm-anchor class="btn btn-transparent" caption="" iconclass="wi wi-location-on fa-2x" name="anchor9"></wm-anchor>
+                                                    </wm-buttongroup>
+                                                </wm-card-footer>
+                                            </wm-card>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn10" padding="unset 0.75em">
+                        <wm-layoutgrid name="datetime" class="datetime">
+                            <wm-gridrow name="gridrow6">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn18">
+                                    <wm-icon name="icon2" iconclass="wi wi-access-time fa-lg" color="#000000" opacity="1"></wm-icon>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn27">
+                                    <wm-label padding="unset 0.5em" name="label6" caption="Date" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn62_1">
+                                    <wm-label padding="unset 0.5em unset unset" name="label35" caption="Starts At" fontsize="13" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn63_1">
+                                    <wm-label padding="unset 0.5em unset unset" name="label36" caption="Ends At" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow33">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn72"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn73">
+                                    <wm-label padding="unset 0.5em" name="label38" caption="bind:Variables.svEventDetails.dataSet.startDate | toDate: 'EEE, MMMM dd, yyyy'"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn60">
+                                    <wm-label padding="unset 0.5px" name="label33_1" caption="bind:Variables.svEventDetails.dataSet.startTime | toDate: 'hh:mm a'"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn61">
+                                    <wm-label padding="unset 0.5px" name="label34" caption="bind:Variables.svEventDetails.dataSet.endTime | toDate: 'hh:mm a'"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-layoutgrid name="layoutgrid6" class="locationmap">
+                            <wm-gridrow name="gridrow12">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn33">
+                                    <wm-icon name="icon3" iconclass="wi wi-location-on fa-lg" color="#000000" opacity="0.7"></wm-icon>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn34">
+                                    <wm-label padding="unset 0.5em" name="Location" caption="Location" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow13">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn35"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn38">
+                                    <wm-label padding="unset 0.5em" name="LocationDetail" caption="bind:Variables.svEventDetails.dataSet.location"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow17">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn43">
+                                    <wm-prefab prefabname="googlemaps" name="googlemaps2" markertype="LatLng" height="400px" apikey="AIzaSyADRRvGAn-Q2TcJsk0uxZ0J-qPHmlXK24A" locations="bind:Variables.svGetLocationPoint.dataSet.results" on-load="Widgets.googlemaps2.markLatLng()"
+                                        lat="geometry.location.lat" lng="geometry.location.lng" maptype="Markers"></wm-prefab>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-layoutgrid name="layoutgrid8" class="hosted">
+                            <wm-gridrow name="gridrow23">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn51_1">
+                                    <wm-label padding="0.2em 0.5em" name="Hosteddetails" caption="Created By:" fontsize="15" color="#000000"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow24">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn53">
+                                    <wm-label padding="unset 0.5em" name="creatorName" caption="Name:"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn54" padding="unset 10px">
+                                    <wm-label name="creatorsName" caption="bind:Variables.svEventDetails.dataSet.userDetail.firstName + &quot; &quot; + Variables.svEventDetails.dataSet.userDetail.lastName" padding="unset unset unset 4px"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow25">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn55">
+                                    <wm-label padding="unset 0.5em" name="creatorEmail" caption="Email:"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn56" padding="unset 10px">
+                                    <wm-label name="creatorsEmail" caption="bind:Variables.svEventDetails.dataSet.userDetail.emailId" padding="unset unset unset 4px"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow26">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn57">
+                                    <wm-label padding="unset 0.5em" name="phoneNumber" caption="Phone:"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn58" padding="unset 10px">
+                                    <wm-label name="creatorsPhone" caption="bind:Variables.svEventDetails.dataSet.userDetail.phoneNumber" padding="unset unset unset 4px"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Share With Friends" iconclass="wi wi-share" name="ShareDialog">
+        <wm-layoutgrid name="layoutgrid9">
+            <wm-gridrow name="gridrow27">
+                <wm-gridcolumn columnwidth="2" name="gridcolumn58_1"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="8" name="gridcolumn59" horizontalalign="center">
+                    <wm-label padding="unset 0.5em" caption="bind:Variables.svEventDetails.dataSet.title" name="EventTitle" fontsize="20" color="#000000" fontfamily="sans-serif"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="2" name="gridcolumn62"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow29" padding="10px unset unset unset">
+                <wm-gridcolumn columnwidth="3" name="gridcolumn66">
+                    <wm-button class="btn-default" caption="" type="button" name="Whatsapp" iconclass="" iconurl="resources/images/imagelists/3225179_app_logo_media_popular_social_icon.png" height="70px" backgroundcolor="#25d366"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="3" name="gridcolumn63">
+                    <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em unset unset" name="button7" iconurl="resources/images/imagelists/3787425_telegram_logo_messanger_social_social_media_icon.png" height="70px" backgroundcolor="#2597cb"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="3" name="gridcolumn64">
+                    <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em unset unset" name="button8" iconurl="resources/images/imagelists/4961974_linkedin_logo_media_icon.png" height="70px" backgroundcolor="#1c5d91"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="3" name="gridcolumn67">
+                    <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em unset unset" name="button9" iconurl="resources/images/imagelists/3225183_app_logo_media_popular_social_icon.png" height="70px" backgroundcolor="#55acee"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button3"></wm-button>
+        </wm-dialogactions>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Ticket Booking" iconclass="wi wi-file-text" name="TicketDialog">
+        <wm-layoutgrid name="layoutgrid12">
+            <wm-gridrow name="gridrow31_1">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn64_1">
+                    <wm-label padding="unset 0.5em" caption="Attendee Info" name="label37" fontsize="15" fontweight="bold" color="#000000"></wm-label>
+                    <wm-layoutgrid name="layoutgrid13">
+                        <wm-gridrow name="gridrow33_1">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn69_1">
+                                <wm-label padding="unset 0.5em" name="label41" caption="Name:"></wm-label>
+                                <wm-label name="AttendeeName" caption="bind:Variables.svGetLoginUserIdDetails.dataSet.firstName + &quot; &quot; +Variables.svGetLoginUserIdDetails.dataSet.lastName"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow34">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn72_1">
+                                <wm-label padding="unset 0.5em" name="label42" caption="EmailID:"></wm-label>
+                                <wm-label name="label44" caption="bind:Variables.svGetLoginUserIdDetails.dataSet.emailId"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow37">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn71_1">
+                                <wm-label padding="unset 0.5em" name="UserId" caption="bind:Variables.svGetLoginUserIdDetails.dataSet.id" show="false"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow38">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn72_2">
+                                <wm-label padding="unset 0.5em" name="EventId" caption="bind:Variables.svEventDetails.dataSet.id" show="false"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-label padding="2em 0.5em unset 0.5em" caption="Event Info" name="label38_1" fontsize="14" fontweight="bold" color="#000000"></wm-label>
+                    <wm-layoutgrid name="layoutgrid14">
+                        <wm-gridrow name="gridrow34_1">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn71_2" class="eventTitle">
+                                <wm-label padding="unset 0.5em" name="label43_1" caption="Event:"></wm-label>
+                                <wm-label name="eventTitle" caption="bind:Variables.svEventDetails.dataSet.title" class="text-ellipsis"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow35">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn73_1">
+                                <wm-label padding="unset 0.5em" name="label44_1" caption="Date:"></wm-label>
+                                <wm-label name="startDate" caption="bind:Variables.svEventDetails.dataSet.startDate"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow36">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn75" horizontalalign="left" class="location">
+                                <wm-icon name="icon7" iconclass="wi wi-location-on" color="#000000" class="location-icon"></wm-icon>
+                                <wm-label name="EventLocation" caption="bind:Variables.svEventDetails.dataSet.location"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn65">
+                    <wm-list listclass="list-group" itemsperrow="xs-1 sm-1 md-1 lg-1" template="true" template-name="Designation Card" class="list-card" statehandler="URL" name="getEventDetailList1" dataset="bind:Variables.svEventDetails.dataSet" navigation="None">
+                        <wm-listtemplate layout="media" name="listtemplate2_1">
+                            <wm-card name="Picture" picturesource="bind:Variables.svEventDetails.dataSet[$i].poster">
+                                <wm-card-content name="card_content2_1">
+                                    <wm-layoutgrid name="layoutgrid15">
+                                        <wm-gridrow name="gridrow41">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn76" horizontalalign="center">
+                                                <wm-label padding="unset 0.5em" name="label53" caption="Order Summary" fontweight="bold" fontsize="15" color="#000000"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow42">
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn78" horizontalalign="left">
+                                                <wm-label padding="unset 0.5em" name="label54" caption="1 x RSVP" fontsize="12" fontfamily="sans-serif"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn79" horizontalalign="left">
+                                                <wm-label padding="unset 0.5em" name="label55" caption="bind:Variables.svEventDetails.dataSet.fee"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow43">
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn80" horizontalalign="left">
+                                                <wm-label padding="unset 0.5em" name="label56" caption="Delivery" fontsize="12" fontfamily="sans-serif" margin="unset unset 0px unset"></wm-label>
+                                                <wm-label padding="unset 0.5em" name="label57" caption="1 x eTicket" fontsize="10" fontfamily="sans-serif"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn81" horizontalalign="left">
+                                                <wm-label padding="unset 0.5em" name="label58" caption="bind:Variables.svEventDetails.dataSet.fee"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow44" padding="2px unset unset unset">
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn84" horizontalalign="left">
+                                                <wm-label padding="unset 0.5em" name="label59" caption="Total" fontsize="12" fontfamily="sans-serif"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn85">
+                                                <wm-label padding="unset 0.5em" name="TotalPrice" caption="bind:Variables.svEventDetails.dataSet.fee"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-card-content>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-list>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-layoutgrid name="layoutgrid16">
+            <wm-gridrow name="gridrow45">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn82">
+                    <wm-button class="btn-default" caption="Back To Events" type="button" margin="unset 0.5em" name="button10" fontfamily="monospace" color="#ffffff" backgroundcolor="#000000" fontweight="bold" textalign="left" on-click="Actions.goToPage_EventList.invoke()"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn83" horizontalalign="right">
+                    <wm-button class="btn-default" caption="Register" type="button" margin="unset 0.5em" name="Register" backgroundcolor="#006a99" color="#ffffff" fontweight="bold" textalign="center" fontfamily="monospace" on-click="Variables.svInsertAttendeeDetail.createRecord();Actions.svTicketRegisterToast.invoke();Actions.goToPage_EventList.invoke()"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow46"></wm-gridrow>
+        </wm-layoutgrid>
+        <wm-dialogactions name="dialogactions2">
+            <wm-container name="container1" horizontalalign="left">
+                <wm-label padding="unset 0.5em" name="label59_1" caption="Powered by Event Connect" fontsize="8" color="#000000"></wm-label>
+            </wm-container>
+        </wm-dialogactions>
+    </wm-dialog>
+</wm-page>

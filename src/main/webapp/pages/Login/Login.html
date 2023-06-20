@@ -1,0 +1,112 @@
+<wm-page layouttype="one-column" columns="1" name="page1" pagetitle="Login">
+    <wm-content name="content1" height="100%">
+        <wm-page-content columnwidth="12" name="column1" padding="0px" class="login">
+            <wm-container class="bg-primary" width="100%" height="100%" backgroundrepeat="no-repeat" backgroundattachment="fixed" name="loginPageContainer" backgroundcolor="#3387ac">
+                <wm-layoutgrid name="loginGrid" height="100%" class="loginbg">
+                    <wm-gridrow name="loginGridRow" class="logingrid">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn14">
+                            <wm-container name="container7">
+                                <wm-layoutgrid name="layoutgrid6">
+                                    <wm-gridrow name="gridrow12">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn17">
+                                            <wm-picture resizemode="cover" name="picture1" backgroundrepeat="no-repeat" picturesource="resources/images/imagelists/jgn.jpg" class="login-img"></wm-picture>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-container>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn9" class="col-xs-1  col-md-4" horizontalalign="left">
+                            <wm-tabs type="static" statehandler="URL" name="tabs1" horizontalalign="center" class="tab" transition="none" height="503px">
+                                <wm-tabpane name="UserLogin" title="User Login">
+                                    <wm-container name="container1" class="panel" backgroundcolor="#ffffff" color="#bdbdbd">
+                                        <wm-login name="loginForm" title="" autocomplete="nofill" on-success="Actions.goToPage_Main.invoke();loginFormSuccess($event, widget)" errormessage="Wrong Credentials">
+                                            <wm-form name="form1" on-success="form1Success($event, widget, $data)" postmessage="Login Successful" messagelayout="Toaster">
+                                                <wm-layoutgrid name="layoutgrid2">
+                                                    <wm-gridrow name="gridrow2">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn4" padding="unset unset 1em unset">
+                                                            <wm-container class="input-group" name="container3">
+                                                                <wm-container class="input-group-addon" name="container4">
+                                                                    <wm-icon name="icon1" iconclass="fa fa-user fa-lg"></wm-icon>
+                                                                </wm-container>
+                                                                <wm-text placeholder="Enter your Email" name="j_username" class="app-login-username" width="100%" autocomplete="false" autocorrect="off" autocapitalize="off" updateon="default" required="true"
+                                                                    type="email"></wm-text>
+                                                            </wm-container>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow3">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn7" padding="unset unset 1em unset">
+                                                            <wm-container class="input-group" name="container3">
+                                                                <wm-container class="input-group-addon" name="container6">
+                                                                    <wm-icon name="icon1" iconclass="fa fa-key fa-lg"></wm-icon>
+                                                                </wm-container>
+                                                                <wm-text type="password" name="j_password" placeholder="Enter Password" class="app-login-passworØd" width="100%" autocomplete="true" autocorrect="off" autocapitalize="off" updateon="default"
+                                                                    required="true"></wm-text>
+                                                            </wm-container>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow4">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                                                            <wm-button type="submit" caption="Login" width="100%" class="app-login-button btn-primary login" name="loginButton" fontsize="1.2" fontunit="em" iconclass="wm-sl-r sl-login fa-lg fa-rotate-180" iconposition="right"
+                                                                iconmargin="0" backgroundcolor="#3387ac"></wm-button>
+                                                            <wm-layoutgrid name="layoutgrid4">
+                                                                <wm-gridrow name="gridrow9_1">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn11_1" horizontalalign="left">
+                                                                        <wm-label padding="1em 0.5em unset 0.5em" name="label1" caption="Don't have an account? Switch to Signup tab to create one" textalign="left" color="#000000"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-form>
+                                        </wm-login>
+                                    </wm-container>
+                                </wm-tabpane>
+                                <wm-tabpane name="UserSignup" title="User Signup" badgetype="default" tabindex="1">
+                                    <wm-liveform errormessage="Something went wrong. Unable to proceed" title="" iconclass="" defaultmode="Edit" dataset="bind:Variables.svInsertUserDetails.dataSet" captionalign="left" captionposition="top" name="UserDetailLiveForm1"
+                                        insertmessage="Thank you for signing up! Your registration was successful" on-success="Actions.navigateToLoginTab.invoke();Actions.UserSignupSuccessToaster.invoke()">
+                                        <wm-layoutgrid columns="2" name="layoutgrid3">
+                                            <wm-gridrow name="gridrow8">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn10_1" horizontalalign="left">
+                                                    <wm-form-field name="firstName" displayname="First Name" show="true" primary-key="false" generator="assigned" key="firstName" type="string" readonly="false" required="true" widget="text" maxchars="30" inputtype="text"
+                                                        placeholder="Enter First Name" autocomplete="false" autotrim="false" regexp="^[a-zA-Z]+$" validationmessage="Firstname is required" width="auto"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn11" horizontalalign="left">
+                                                    <wm-form-field name="lastName" displayname="Last Name" show="true" primary-key="false" generator="assigned" key="lastName" type="string" readonly="false" required="true" widget="text" maxchars="30" inputtype="text"
+                                                        placeholder="Enter Last Name" autocomplete="false" autotrim="false" regexp="^[a-zA-Z]+$" validationmessage="Lastname is required" width="auto"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow9">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn12" horizontalalign="left">
+                                                    <wm-form-field name="emailId" displayname="Email Id" show="true" primary-key="false" generator="assigned" key="emailId" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="email"
+                                                        placeholder="Enter Email" autocomplete="false" regexp="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" validationmessage="EmailID should be filled with correct format" width="auto"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn13" horizontalalign="left">
+                                                    <wm-form-field name="phoneNumber" displayname="Phone Number" show="true" primary-key="false" generator="assigned" key="phoneNumber" type="string" readonly="false" required="true" widget="text" maxchars="255"
+                                                        inputtype="text" placeholder="Enter Phone Number" autocomplete="false" regexp="^[6-9]\d{9}$" validationmessage="Phone Number is required" width="auto"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow10">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn14_1" horizontalalign="left">
+                                                    <wm-form-field name="Password" displayname="Password" show="true" primary-key="false" generator="assigned" key="password" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="password"
+                                                        placeholder="Password" autocomplete="false" width="auto"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn15" horizontalalign="left">
+                                                    <wm-form-field name="confirmPassword" displayname="Confirm Password" show="true" primary-key="false" generator="assigned" key="confirmPassword" type="string" readonly="false" required="true" widget="text"
+                                                        maxchars="255" inputtype="password" placeholder="Confirm Password" autocomplete="false" width="auto"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                        <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="false" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                        <wm-form-action key="save" display-name="Register" show="true" class="form-save btn-success" iconclass="wi wi-person-add fa-lg" title="Register" disabled="false" widget-type="button" type="submit"
+                                            update-mode="true"></wm-form-action>
+                                    </wm-liveform>
+                                </wm-tabpane>
+                            </wm-tabs>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

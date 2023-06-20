@@ -1,0 +1,34 @@
+{
+  "endpointAddress" : "https://maps.googleapis.com/maps/api/geocode/json",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "address" : "Dindi+Nalgonda",
+    "key" : "AIzaSyADRRvGAn-Q2TcJsk0uxZ0J-qPHmlXK24A"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json; charset=UTF-8" ],
+      "Date" : [ "Mon, 08 May 2023 09:09:57 GMT" ],
+      "Pragma" : [ "no-cache" ],
+      "Expires" : [ "Fri, 01 Jan 1990 00:00:00 GMT" ],
+      "Cache-Control" : [ "no-cache, must-revalidate" ],
+      "Vary" : [ "Accept-Language" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Server" : [ "mafe" ],
+      "X-XSS-Protection" : [ "0" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "Server-Timing" : [ "gfet4t7; dur=136" ],
+      "Alt-Svc" : [ "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000" ],
+      "Transfer-Encoding" : [ "chunked" ]
+    },
+    "responseBody" : "{\"results\":[{\"address_components\":[{\"long_name\":\"Dindi\",\"short_name\":\"Dindi\",\"types\":[\"locality\",\"political\",\"administrative_area_level_3\",\"political\",\"administrative_area_level_1\",\"political\",\"country\",\"political\",\"postal_code\"]}],\"formatted_address\":\"Dindi, Telangana 508258, India\",\"geometry\":{\"bounds\":{\"northeast\":{\"lat\":16.5579675,\"lng\":78.69309419999999},\"southwest\":{\"lat\":16.5488352,\"lng\":78.6848545}},\"location\":{\"lat\":16.5541395,\"lng\":78.6895086},\"location_type\":\"APPROXIMATE\",\"viewport\":{\"northeast\":{\"lat\":16.5579675,\"lng\":78.69309419999999},\"southwest\":{\"lat\":16.5488352,\"lng\":78.6848545}}},\"place_id\":\"ChIJ7Wd_RViKyjsRPnDmqBZNqLs\",\"types\":[\"locality\",\"political\"]}],\"status\":\"OK\"}",
+    "convertedResponse" : null
+  }
+}

@@ -1,0 +1,44 @@
+.color-header {
+    background-color: #3387ac;
+}
+
+.wm-app .btn {
+    padding: 10px 30px;
+}
+
+.wm-app .app-left-panel .app-nav.nav-pills .app-nav-item a.active {
+    width: 100%;
+}
+
+.wm-app .app-left-panel .app-nav.nav-pills {
+    color: green;
+}
+
+.wm-app .app-page-main .btn-default:hover {
+    background: black !important;
+    color: white;
+}
+
+.wm-app .card .app-card-image img {
+    border-radius: 0px;
+}
+
+.image-radius {
+    border-radius: 5px;
+}
+
+.wm-app .app-liveform .app-timeinput .input-group-btn .btn.btn-default {
+    border: none;
+}
+
+.wm-app .app-left-panel .app-nav.nav-pills .app-nav-item a .anchor-caption {
+    width: 100%;
+}
+
+.brand-label {
+    vertical-align: sub;
+}
+
+.wm-app .app-page-login .tab {
+    border-radius: 0px !important;
+}

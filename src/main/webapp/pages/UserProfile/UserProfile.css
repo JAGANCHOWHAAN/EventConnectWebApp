@@ -1,0 +1,34 @@
+.profile{
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.myevent-pic{
+    border-radius: 0 !important;
+}
+ .wm-app .app-livelist.list-card .app-list-item .app-card.card{
+     margin: 0px;
+     padding: 10px;
+     margin-right: 10px;
+     border-bottom-left-radius: 0px;
+     border-bottom-right-radius: 0px;
+ }
+.app-livelist.list-card .app-list-item .app-card.card {
+    background: white;
+    border: none;
+}
+.time{
+    width: 180px;
+}
+.btn-update{
+    background: black;
+    border: none;
+}
+.btn-update:hover{
+    border: none;
+    background: #2ea3d6;
+}
+.panel-footer{
+    width: 470px;
+    padding: 0;
+}
